@@ -1,7 +1,7 @@
 import { Formik } from 'formik';
 import { useDispatch, useSelector } from "react-redux";
-import { addContacts } from 'redux/contactsSlise';
-
+//import { addContacts } from 'redux/contactsSlise';
+import { addContacts } from 'redux/operations';
 import * as Yup from 'yup';
 import { FaUserPlus } from "react-icons/fa";
 

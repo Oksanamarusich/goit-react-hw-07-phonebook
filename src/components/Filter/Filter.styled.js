@@ -20,7 +20,7 @@ display: flex;
 export const FilterInput = styled.input`
 padding: 8px;
 
-width: 320px;
+width: 400px;
 
 border: 1px solid ${prop => prop.theme.colors.gray};
   outline: 0;
