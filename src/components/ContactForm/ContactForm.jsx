@@ -1,5 +1,6 @@
 import { Formik } from 'formik';
 import { useDispatch, useSelector } from "react-redux";
+import { selectContacts } from 'redux/selectors';
 //import { addContacts } from 'redux/contactsSlise';
 import { addContacts } from 'redux/operations';
 import * as Yup from 'yup';
@@ -20,7 +21,7 @@ import { Container,StyledForm, StyledField, Button, Label, Error } from "./Conta
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts.contacts);
+  const contacts = useSelector(selectContacts);
 
   const onSubmitForm = (values, actions) => {
     const payload = {

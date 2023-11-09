@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContacts } from 'redux/operations';
+import { selectVisibleContacts } from 'redux/selectors';
 
 import { FaTrashAlt } from "react-icons/fa";
 import {
@@ -14,14 +15,10 @@ import {
 } from './ContactList.styled'
 
 export const ContactList = () => {
-    const contacts = useSelector(state => state.contacts.contacts);
+    const contacts = useSelector(selectVisibleContacts);
     console.log('contactsList', contacts)
-    //const filter = useSelector(state => state.filter.filter);
     const dispatch = useDispatch();
     
-//     const getVisibleName = contacts.filter(contact =>
-//        contact.name.toLowerCase().includes(filter.toLowerCase()));
-//    console.log('getVisibleName', getVisibleName)
     
  return <Container>
      {contacts.map(({ id, name, number }) => (
