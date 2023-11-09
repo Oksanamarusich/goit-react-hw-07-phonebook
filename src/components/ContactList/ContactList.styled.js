@@ -62,7 +62,7 @@ export const Contact = styled.p`
 margin-right: 20px;
 
 `;
-export const Number = styled.p`
+export const PhoneNumber = styled.p`
 font-style: italic;
 margin-right: auto;
 `;

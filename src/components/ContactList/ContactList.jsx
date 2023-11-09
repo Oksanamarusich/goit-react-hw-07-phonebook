@@ -11,14 +11,14 @@ import {
     ContainerButtons,
     ContainerContact,
     Contact,
-    Number
+    PhoneNumber
 } from './ContactList.styled'
 
 export const ContactList = () => {
+    
     const contacts = useSelector(selectVisibleContacts);
     console.log('contactsList', contacts)
     const dispatch = useDispatch();
-    
     
  return <Container>
      {contacts.map(({ id, name, number }) => (
@@ -26,7 +26,7 @@ export const ContactList = () => {
                 <ListItem>
                     <ContainerContact>
                         <Contact>{name}: </Contact>
-                        <Number>{number} </Number>
+                        <PhoneNumber>{number} </PhoneNumber>
                     <ContainerButtons>
                         <Button type="button"
                         onClick={() => dispatch(deleteContacts(id))}>
