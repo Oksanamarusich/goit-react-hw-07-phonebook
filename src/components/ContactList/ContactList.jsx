@@ -15,9 +15,7 @@ import {
 } from './ContactList.styled'
 
 export const ContactList = () => {
-    
     const contacts = useSelector(selectVisibleContacts);
-    console.log('contactsList', contacts)
     const dispatch = useDispatch();
     
  return <Container>
@@ -33,9 +31,7 @@ export const ContactList = () => {
                         <FaTrashAlt color="#808080" /></Button>
                     </ContainerButtons>
                     </ContainerContact>
-                    
-                    
-                 </ListItem>
+                </ListItem>
             </List>
         ))}
             
