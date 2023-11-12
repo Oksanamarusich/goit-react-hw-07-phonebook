@@ -21,7 +21,6 @@ export const App = () => {
   }, [dispatch]);
 
   return (<div>
-    {isLoading && !error && <Loader/>} 
      <h1>Phonebook</h1>
     <ContactForm />
     {error && (<ErrorMessage>Whoops! Error! Please reload this page!</ErrorMessage>)}  
